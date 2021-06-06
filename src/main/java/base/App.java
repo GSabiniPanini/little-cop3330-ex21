@@ -31,6 +31,70 @@ public class App
 
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        App myApp = new App();
+
+        Integer number = myApp.getnum();
+        String msg = myApp.createmsg(number);
+        myApp.output(msg);
+    }
+
+    public Integer getnum()
+    {
+        System.out.print("Please enter the number of the month: ");
+        Integer number = in.nextInt();
+        return number;
+    }
+
+    public String createmsg(Integer number)
+    {
+        String month;
+        switch (number) {
+            case 1:
+                month = "January";
+                break;
+            case 2:
+                month = "February";
+                break;
+            case 3:
+                month = "March";
+                break;
+            case 4:
+                month = "April";
+                break;
+            case 5:
+                month = "May";
+                break;
+            case 6:
+                month = "June";
+                break;
+            case 7:
+                month = "July";
+                break;
+            case 8:
+                month = "August";
+                break;
+            case 9:
+                month = "September";
+                break;
+            case 10:
+                month = "October";
+                break;
+            case 11:
+                month = "November";
+                break;
+            case 12:
+                month = "December";
+                break;
+            default:
+                month = "";
+        }
+
+        String msg = ("The name of the month is " + month + ".");
+        return msg;
+    }
+
+    public void output(String msg)
+    {
+        System.out.println(msg);
     }
 }
